@@ -1,0 +1,13 @@
+.jumbotron {
+  background-image: url('../../images/bookshelf.jpeg');
+  padding: 80px 0px;
+}
+
+.text {
+  color: rgb(236, 213, 183);
+  text-shadow:
+  -1.5px -1.5px 0 rgba(0, 0, 0, 0.616),
+  1.5px -1.5px 0 rgba(0, 0, 0, 0.616),
+  -1.5px 1.5px 0 rgba(0, 0, 0, 0.616),
+  1.5px 1.5px 0 rgba(0, 0, 0, 0.616);
+}

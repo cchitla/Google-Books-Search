@@ -6,9 +6,8 @@ import Book from '../Book/Book';
 const SearchContainer = () => {
   return (
     <>
-    <div>SearchContainer</div>
-    <Search />
-    <Book />
+      <Search />
+      <Book />
     </>
 
   );

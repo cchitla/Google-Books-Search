@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 
 import NavBar from './components/NavBar/NavBar';
@@ -18,9 +18,9 @@ class App extends Component {
           <NavBar />
           <Header />
           <Switch>
-            <Route exact path="/"></Route>
-            <Route exact path="/search" component={SearchContainer}></Route>
-            <Route exact path="/saved" component={SavedContainer}></Route>
+            <Route exact path="/" component={SearchContainer} />
+            <Route exact path="/saved" component={SavedContainer} />
+            <Route><Redirect to="/" /></Route>
           </Switch>
         </div>
       </Router>

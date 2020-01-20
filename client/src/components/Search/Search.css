@@ -1,0 +1,53 @@
+.form {
+  width: 90%;
+}
+
+.form-control {
+  margin-top: 10px;
+}
+
+.container {
+  padding: 15px;
+}
+
+.form-control {
+  text-align: center;
+}
+
+.title {
+  background-color: rgb(179, 150, 112);
+  opacity: 1;
+  height: 2rem;
+  transition: 0.6s;
+}
+
+.author {
+  background-color: rgb(112, 141, 179);
+  opacity: 1;
+  height: 2rem;
+  transition: 0.6s;
+}
+
+.title-inactive {
+  color: black;
+  background-color: rgb(179, 150, 112);
+  opacity: 0.5;
+  height: 2rem;
+}
+
+.author-inactive {
+  color: black;
+  background-color: rgb(112, 141, 179);
+  opacity: 0.5;
+  height: 2rem;
+}
+
+.button {
+  width: 25%;
+  background-color: rgb(236, 213, 183);
+  border: none;
+}
+
+.button:hover {
+  background-color: rgb(112, 141, 179);
+}
