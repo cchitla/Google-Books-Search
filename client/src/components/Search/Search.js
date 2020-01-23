@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+import { searchByAuthor, searchByTitle } from '../../utils/googlebooks';
+
 const Search = () => {
   const [search, setSearch] = useState("");
   const [searchBy, setSearchBy] = useState("title");
@@ -24,10 +26,14 @@ const Search = () => {
     return (
       <Row>
         <Col>
-          <div onClick={e => selectOption("title")} className={searchBy === "title" ? style : "title-inactive"}>Search by Title</div>
+          <div onClick={e => selectOption("title")}
+            className={searchBy === "title" ? style : "title-inactive"}>
+            Search by Title</div>
         </Col>
         <Col>
-          <div onClick={e => selectOption("author")} className={searchBy === "author" ? style : "author-inactive"}>Search by Author</div>
+          <div onClick={e => selectOption("author")}
+            className={searchBy === "author" ? style : "author-inactive"}>
+            Search by Author</div>
         </Col>
       </Row>
     )
@@ -39,10 +45,13 @@ const Search = () => {
       <Container>
         {searchType()}
         <Form>
-          <Form.Control size="sm" onChange={e => handleInputChange(e)} type="text" placeholder="" value={search} />
+          <Form.Control size="sm"
+            onChange={e => handleInputChange(e)}
+            type="text" placeholder="" value={search} />
         </Form>
       </Container>
-      <Button className="button" type="submit">Submit</Button>
+      <Button onClick={ searchBy === "title" ? () => searchByTitle(search) : () => searchByAuthor(search) } 
+      className="button" type="submit">Submit</Button>
     </>
   );
 };
